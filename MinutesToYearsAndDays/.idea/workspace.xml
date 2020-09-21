@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57dad0ce-9ca1-4e9c-b1d4-c3466398e69b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../AreaCalculator/src/AreaCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AreaCalculator/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="04864272-e3b4-4f2f-8fac-8af0d2279da0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,16 +15,13 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectId" id="1hpZEB8njOHCcHjmrCq0ixXMcXB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1hpWi8mB69yIfaivuqrL6TXTvkb" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AreaCalculator" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="C:/apps/portfolio/DecimalComparator" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.19433199" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -42,36 +36,37 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="DecimalComparator" />
+      <module name="MinutesToYearsAndDays" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MinutesToYearsAndDays" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="57dad0ce-9ca1-4e9c-b1d4-c3466398e69b" name="Default Changelist" comment="" />
-      <created>1600438237868</created>
+      <changelist id="04864272-e3b4-4f2f-8fac-8af0d2279da0" name="Default Changelist" comment="" />
+      <created>1600708637844</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1600438237868</updated>
+      <updated>1600708637844</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
