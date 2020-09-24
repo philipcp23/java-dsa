@@ -1,6 +1,22 @@
 public class Main {
 
     public static void main(String[] args) {
+        VipCustomer pensHockey = new VipCustomer();
+        System.out.println(pensHockey.getName());
+        System.out.println(pensHockey.getCreditLimit());
+        System.out.println(pensHockey.getEmail());
+        System.out.println("---------------");
+        VipCustomer pens2 = new VipCustomer("Pens2", 2);
+        System.out.println(pens2.getName());
+        System.out.println(pens2.getCreditLimit());
+        System.out.println(pens2.getEmail());
+        System.out.println("---------------");
+        VipCustomer penguins = new VipCustomer("Pittsburgh Penguins", 100, "PittsburghPenguins@email.com");
+        System.out.println(penguins.getName());
+        System.out.println(penguins.getCreditLimit());
+        System.out.println(penguins.getEmail());
+        System.out.println("---------------");
+        
 
 
 
