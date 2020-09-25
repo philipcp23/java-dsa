@@ -16,7 +16,6 @@ public class Main {
         System.out.println(penguins.getCreditLimit());
         System.out.println(penguins.getEmail());
         System.out.println("---------------");
-        
 
 
 
