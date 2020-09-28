@@ -104,6 +104,28 @@ class Lambo extends Car {
 
 }
 
+class Ferrari extends Car {
+    public Ferrari(int cylinders, String name) {
+        super(cylinders, name);
+    }
+
+    @Override
+    public void startEngine() {
+        System.out.println("ferrari start engine");
+    }
+
+    @Override
+    public void brake() {
+        System.out.println("ferrari brake");
+    }
+
+    @Override
+    public void accelerate() {
+        System.out.println("ferrari accelerate");
+    }
+
+}
+
 
 
 public class Main {
@@ -123,12 +145,17 @@ public class Main {
         range.accelerate();
         range.brake();
 
-        Lambo lambo = new Lambo(8, "Lambo");
+        Lambo lambo = new Lambo(12, "Range");
         lambo.startEngine();
         lambo.accelerate();
         lambo.brake();
 
-    }
+        Ferrari ferrari = new Ferrari(8, "Ferrari");
+        ferrari.startEngine();
+        ferrari.accelerate();
+        ferrari.brake();
 
+
+    }
 
 }
