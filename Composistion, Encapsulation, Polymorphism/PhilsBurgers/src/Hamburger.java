@@ -1,38 +1,43 @@
 public class Hamburger {
-    private String breadType;
+    private String name;
     private String meat;
-    private boolean lettuce;
-    private boolean pickle;
-    private boolean cheese;
-    private boolean onion;
-    private double price = 10.00;
-    private double bacon = 1.00;
-    private double doubleMeat = 3.00;
-    private double tripleMeat = 5.00;
+    private String bread;
+    
+    private double lettuce = .50;
+    private double tomato = .50;
+    private double pickle = .50;
+    private double onion = .50;
 
-    public Hamburger(boolean lettuce, boolean pickle, boolean cheese, boolean onion) {
-        this.breadType = "Bun";
-        this.meat = "80/20";
-        this.lettuce = lettuce;
-        this.pickle = pickle;
-        this.cheese = cheese;
-        this.onion = onion;
+    private double price = 6.00;
+
+    public Hamburger(String name, String meat, String bread) {
+        this.name = name;
+        this.meat = meat;
+        this.bread = bread;
+    }
+    
+    public void additions(String additions) {
+        String add = additions.toLowerCase();
+        if (add.equals("tomato")) {
+            price += this.tomato;
+            System.out.println(tomato + " for tomato");
+        }
+        if (add.equals("lettuce")) {
+            price += this.lettuce;
+            System.out.println(lettuce + " for lettuce");
+        }
+        if (add.equals("pickle")) {
+            price += this.pickle;
+            System.out.println(pickle + " for pickle");
+        }
+        if (add.equals("onion")) {
+            price += this.onion;
+            System.out.println(onion + " for onion");
+        }
     }
 
     public double getPrice() {
-        return this.price;
-    }
-
-    public void addBacon() {
-        this.price += bacon;
-    }
-
-    public void addDoubleMeat() {
-        this.price += doubleMeat;
-    }
-
-    public void addTripleMeat() {
-        this.tripleMeat += tripleMeat;
+        return price;
     }
 
     public double addTax(double price) {

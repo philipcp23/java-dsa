@@ -10,13 +10,15 @@ public class Main {
 
 
         System.out.println("----------Standard Hamburger no additions----------");
-        Hamburger hamburger = new Hamburger(true, true, true, false);
-        double price = hamburger.getPrice();
-        System.out.println("hamburger.getPrice() = " + price);
-        price = hamburger.addTax(price);
-        System.out.println("The price of your hamburger is: "  + price + " dollars!");
-        System.out.println("----------Add bacon----------");
-        hamburger.addBacon();
+        Hamburger hamburger = new Hamburger("Traditional", "Regular", "Bun");
+        System.out.println(hamburger.getPrice() + " standard price");
+        hamburger.additions("tomato");
+        hamburger.additions("lettuce");
+        //hamburger.additions("onion");
+        hamburger.additions("pickle");
+        System.out.println(hamburger.getPrice() + " ending price");
+        System.out.println("----------Healthy Hamburger add avocado additions----------");
+
 
     }
 }

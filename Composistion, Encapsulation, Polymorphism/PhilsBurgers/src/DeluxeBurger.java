@@ -1,2 +1,3 @@
-public class DeluxeBurger {
+public class DeluxeBurger  {
+
 }
