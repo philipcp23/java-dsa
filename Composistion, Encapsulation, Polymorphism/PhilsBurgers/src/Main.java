@@ -18,6 +18,11 @@ public class Main {
         hamburger.additions("pickle");
         System.out.println(hamburger.getPrice() + " ending price");
         System.out.println("----------Healthy Hamburger add avocado additions----------");
+        HealthyBurger healthyBurger = new HealthyBurger("Lean");
+        System.out.println(healthyBurger.getPrice() + " standard price");
+        healthyBurger.addAvocado();
+        healthyBurger.addVeggie();
+        System.out.println(healthyBurger.getPrice() + " ending price");
 
 
     }
