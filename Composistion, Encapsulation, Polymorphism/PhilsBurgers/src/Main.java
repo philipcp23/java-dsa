@@ -6,9 +6,6 @@ public class Main {
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Welcome to Phil's Burger! Can we help you?");
 //        scanner.nextLine();
-
-
-
         System.out.println("----------Standard Hamburger no additions----------");
         Hamburger hamburger = new Hamburger("Traditional", "Regular", "Bun");
         System.out.println(hamburger.getPrice() + " standard price");
@@ -23,6 +20,13 @@ public class Main {
         healthyBurger.addAvocado();
         healthyBurger.addVeggie();
         System.out.println(healthyBurger.getPrice() + " ending price");
+        System.out.println("----------Healthy Hamburger add avocado additions----------");
+        DeluxeBurger deluxeBurger = new DeluxeBurger();
+        System.out.println(deluxeBurger.getPrice() + " standard price");
+        deluxeBurger.addChips();
+        deluxeBurger.addDrink();
+        deluxeBurger.additions("tomato");
+        System.out.println(deluxeBurger.getPrice() + " ending price");
 
 
     }
