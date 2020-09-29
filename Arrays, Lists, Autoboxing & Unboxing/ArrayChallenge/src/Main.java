@@ -41,10 +41,16 @@ public class Main {
         while (flag) {
             flag = false;
             for (int i = 0; i < sortedArray.length - 1; i++) {
+                System.out.println("Iteration: " + i);
                 if (sortedArray[i] < sortedArray[i + 1]) {
+                    System.out.println("sortedArray[i]: " + sortedArray[i]);
+                    System.out.println("sortedArray[i+1]: " +sortedArray[i+1]);
                     temp = sortedArray[i];
+                    System.out.println("temp: " + temp);
                     sortedArray[i]  = sortedArray[i + 1];
+                    System.out.println("sortedArray[i]: " + sortedArray[i]);
                     sortedArray[i + 1] = temp;
+                    System.out.println("sortedArray[i+1]: " + sortedArray[i+1]);
                     flag = true;
                 }
             }
@@ -52,4 +58,5 @@ public class Main {
         return sortedArray;
     }
 }
-
+// 160 120 100 50 40
+// 50 160 40 100 120
