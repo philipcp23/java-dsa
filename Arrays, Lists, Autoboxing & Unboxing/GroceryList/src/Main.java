@@ -1,10 +1,13 @@
 import java.util.Scanner;
 
 public class Main {
+
     private static GroceryList groceryList = new GroceryList();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+
+
         boolean quit = false;
         int choice = 0;
         printInstructions();
@@ -55,8 +58,16 @@ public class Main {
     }
 
     private static void modifyItem() {
+        System.out.println("Enter the item number to modify: ");
+        int itemNo = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Enter the modification to the GroceryList: ");
+        String newItem = scanner.nextLine();
+        groceryList.modifyGroceryItem(itemNo-1, newItem);
     }
 
     private static void addItem() {
+        System.out.println("Enter an item to the GroceryList: ");
+        groceryList.addGroceryItem(scanner.nextLine());
     }
 }
