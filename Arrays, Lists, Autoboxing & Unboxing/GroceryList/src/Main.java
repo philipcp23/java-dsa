@@ -55,6 +55,10 @@ public class Main {
     }
 
     private static void removeItem() {
+        System.out.println("Enter item number: ");
+        int itemNo = scanner.nextInt();
+        scanner.nextLine();
+        groceryList.removeGroceryItem(itemNo);
     }
 
     private static void modifyItem() {
