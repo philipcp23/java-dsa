@@ -1,19 +1,18 @@
 import java.util.Scanner;
 
 public class Main {
-
-    private static GroceryList groceryList = new GroceryList();
     private static Scanner scanner = new Scanner(System.in);
+    private static GroceryList groceryList = new GroceryList();
 
     public static void main(String[] args) {
-
-
         boolean quit = false;
         int choice = 0;
         printInstructions();
         while (!quit) {
             System.out.println("Enter your choice: ");
             choice = scanner.nextInt();
+            scanner.nextLine();
+
             switch (choice) {
                 case 0:
                     printInstructions();
@@ -51,14 +50,9 @@ public class Main {
         System.out.println("\t 6 - To quit the application.");
     }
 
-    private static void searchForItem() {
-    }
-
-    private static void removeItem() {
-        System.out.println("Enter item number: ");
-        int itemNo = scanner.nextInt();
-        scanner.nextLine();
-        groceryList.removeGroceryItem(itemNo);
+    private static void addItem() {
+        System.out.println("Please enter the grocery item: ");
+        groceryList.addGroceryItem(scanner.nextLine());
     }
 
     private static void modifyItem() {
@@ -70,8 +64,25 @@ public class Main {
         groceryList.modifyGroceryItem(itemNo-1, newItem);
     }
 
-    private static void addItem() {
-        System.out.println("Enter an item to the GroceryList: ");
-        groceryList.addGroceryItem(scanner.nextLine());
+    private static void removeItem() {
+        System.out.println("Enter item number: ");
+        int itemNo = scanner.nextInt();
+        scanner.nextLine();
+        groceryList.removeGroceryItem(itemNo-1);
     }
+
+    private static void searchForItem() {
+        System.out.println("Item to search for: ");
+        String searchItem = scanner.nextLine();
+        if (groceryList.findItem(searchItem) != null) {
+            System.out.println("Found " + searchItem + " in our GroceryList.");
+        } else {
+            System.out.println(searchItem + " is not in the GroceryList.");
+        }
+    }
+
+
+
 }
+
+
