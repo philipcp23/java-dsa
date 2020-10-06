@@ -64,4 +64,14 @@ public class MobilePhone {
         return null;
     }
 
+    //print contact
+    public void printContacts() {
+        int index = 0;
+        System.out.println("Contact List");
+        for (Contact contact : contacts) {
+            System.out.println((index + 1) + "." + this.contacts.get(index).getName() +
+                    " |Mobile: " + this.contacts.get(index).getPhoneNumber());
+        }
+    }
+
 }
