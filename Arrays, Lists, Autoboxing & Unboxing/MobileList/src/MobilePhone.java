@@ -24,9 +24,20 @@ public class MobilePhone {
             System.out.println(contact.getName() + " was not found.");
             return false;
         }
-
         this.contacts.set(foundPosition, newContact);
         System.out.println(contact.getName() + ", was replaced with " + newContact.getName());
+        return true;
+    }
+
+    //remove contact
+    public boolean removeContact(Contact contact) {
+        int foundPosition = findContact(contact);
+        if (foundPosition < 0) {
+            System.out.println(contact.getName() + " was not found.");
+            return false;
+        }
+        this.contacts.remove(foundPosition);
+        System.out.println(contact.getName() + " was deleted.");
         return true;
     }
 
@@ -43,6 +54,14 @@ public class MobilePhone {
             }
         }
         return -1;
+    }
+
+    //query contact
+    public String queryContact(Contact contact) {
+        if (findContact(contact) >= 0) {
+            return contact.getName();
+        }
+        return null;
     }
 
 }
