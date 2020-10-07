@@ -32,7 +32,7 @@ public class Main {
 
             switch (action) {
                 case 0:
-                    System.out.println("Shutting down...");
+                    System.out.println("Shutting down...\n\n (|)");
                     quit = true;
                     break;
                 case 1:
@@ -58,7 +58,51 @@ public class Main {
     }
 
     private static void updateContact() {
+        System.out.println("Enter existing contact name: ");
+        String name = scanner.nextLine();
+        Contact existing = mobilePhone.queryContact(name);
+        if (existing == null) {
+            System.out.println("Contact not found.");
+            return;
+        }
+        System.out.println("Enter new contact name: ");
+        String nameChange = scanner.nextLine();
+        System.out.println("Enter new contact phone number: ");
+        String numberChange = scanner.nextLine();
+        Contact newContact = Contact.createContact(nameChange, numberChange);
+        if (mobilePhone.updateContact(existing, newContact)) {
+            System.out.println("Updated Record");
+        } else {
+            System.out.println("Error updating record");
+        }
     }
+
+    private static void queryContact() {
+        System.out.println("Enter existing contact name: ");
+        String name = scanner.nextLine();
+        Contact existing = mobilePhone.queryContact(name);
+        if (existing == null) {
+            System.out.println("Contact not found.");
+            return;
+        }
+        System.out.println("Name: " + existing.getName() + " phone number is " + existing.getPhoneNumber());
+    }
+
+    private static void removeContact() {
+        System.out.println("Enter existing contact name: ");
+        String name = scanner.nextLine();
+        Contact existing = mobilePhone.queryContact(name);
+        if (existing == null) {
+            System.out.println("Contact not found.");
+            return;
+        }
+
+        if (mobilePhone.removeContact(existing)) {
+            System.out.println("Successfully deleted");
+        } else
+            System.out.println("Error deleting contact.");
+    }
+
 
     private static void addNewContact() {
         System.out.println("Enter new contact name: ");
@@ -67,7 +111,7 @@ public class Main {
         String phone = scanner.nextLine();
         Contact newContact = Contact.createContact(name, phone);
         if (mobilePhone.addContact(newContact)) {
-            System.out.println("New contact added: " + name + " |Mobile: " + phone);
+            System.out.println("New contact added: " + name + " | Mobile: " + phone);
         }
         else {
             System.out.println(name + " already exists!");

@@ -48,12 +48,20 @@ public class MobilePhone {
     private int findContact(String name) {
         int index = 0;
         for(Contact contact : contacts) {
-            contact = this.contacts.get(index++);
+            contact = this.contacts.get(index);
             if (contact.getName().equals(name)) {
-                return index;
+                return index++;
             }
         }
         return -1;
+    }
+
+    public Contact queryContact(String name) {
+        int position = findContact(name);
+        if (position >= 0) {
+            return this.contacts.get(position);
+        }
+        return null;
     }
 
     //query contact
@@ -69,8 +77,10 @@ public class MobilePhone {
         int index = 0;
         System.out.println("Contact List");
         for (Contact contact : contacts) {
-            System.out.println((index + 1) + "." + this.contacts.get(index).getName() +
-                    " |Mobile: " + this.contacts.get(index).getPhoneNumber());
+            contact = this.contacts.get(index);
+            System.out.println((index + 1) + "." + contact.getName() +
+                    " | Mobile: " + contacts.get(index).getPhoneNumber());
+            index ++;
         }
     }
 
