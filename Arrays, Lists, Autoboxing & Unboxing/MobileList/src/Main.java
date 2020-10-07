@@ -62,7 +62,7 @@ public class Main {
         String name = scanner.nextLine();
         Contact existing = mobilePhone.queryContact(name);
         if (existing == null) {
-            System.out.println("Contact not found.");
+            System.out.println("Contact update not found.");
             return;
         }
         System.out.println("Enter new contact name: ");
@@ -82,7 +82,7 @@ public class Main {
         String name = scanner.nextLine();
         Contact existing = mobilePhone.queryContact(name);
         if (existing == null) {
-            System.out.println("Contact not found.");
+            System.out.println("Query not found.");
             return;
         }
         System.out.println("Name: " + existing.getName() + " phone number is " + existing.getPhoneNumber());
