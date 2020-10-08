@@ -13,7 +13,6 @@
   MobilePhone should do everything with Contact objects only.
  */
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
