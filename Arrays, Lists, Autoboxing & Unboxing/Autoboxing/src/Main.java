@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -26,6 +25,27 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Bank bank = new Bank("PNC");
+
+        bank.addBranch("South Side");
+
+        bank.addCustomer("South Side",
+                "Phil",
+                100.00);
+        bank.addCustomer("South Side",
+                "Alexa",
+                75.00);
+        bank.addCustomer("South Side",
+                "Dee",
+                45.00);
+
+        bank.addBranch("Pittsburgh");
+        bank.addCustomer("Pittsburgh",
+                "Sam",
+                90.00);
+
+        bank.listCustomers("South Side", false);
+
 
         /*
         Your job is to create a simple banking application.
@@ -48,39 +68,39 @@ public class Main {
          */
 
 
-
-        String[] strArray = new String[10];
-        int[] intArray = new int[10];
-
-        ArrayList<String> stringArrayList = new ArrayList<String>();
-        stringArrayList.add("Phil");
-
-        //ArrayList<int> intArrayList = new ArrayList<int>();
-        //ArrayList<IntClass> intClass = new ArrayList<IntClass>();
-        //intClass.add(new IntClass(54));
-        Integer integer = new Integer(54);
-        Double doubleValue = new Double(10.0);
-
-        ArrayList<Integer> intArrayList = new ArrayList<>();
-        for (int i = 0; i <= 10; i++) {
-           intArrayList.add(i);
-           System.out.println(i + " --> " + intArrayList.get(i));
-        }
-
-        Integer myIntValue = 56; // Integer.valueOf(56);
-        int myInt = myIntValue; // myIntValue.intValue();
-
-        System.out.println("--------------------------------------------");
-        ArrayList<Double> dibble = new ArrayList<>();
-        for (double dbl = 0.0; dbl <= 10; dbl += 0.5) {
-            dibble.add(dbl);
-        }
-
-        for (int i = 0; i < dibble.size(); i++) {
-            double value = dibble.get(i);
-            System.out.println(i + " = " + value);
-        }
-
+//        String[] strArray = new String[10];
+//        int[] intArray = new int[10];
+//
+//        ArrayList<String> stringArrayList = new ArrayList<String>();
+//        stringArrayList.add("Phil");
+//
+//        //ArrayList<int> intArrayList = new ArrayList<int>();
+//        //ArrayList<IntClass> intClass = new ArrayList<IntClass>();
+//        //intClass.add(new IntClass(54));
+//        Integer integer = new Integer(54);
+//        Double doubleValue = new Double(10.0);
+//
+//        ArrayList<Integer> intArrayList = new ArrayList<>();
+//        for (int i = 0; i <= 10; i++) {
+//           intArrayList.add(i);
+//           System.out.println(i + " --> " + intArrayList.get(i));
+//        }
+//
+//        Integer myIntValue = 56; // Integer.valueOf(56);
+//        int myInt = myIntValue; // myIntValue.intValue();
+//
+//        System.out.println("--------------------------------------------");
+//        ArrayList<Double> dibble = new ArrayList<>();
+//        for (double dbl = 0.0; dbl <= 10; dbl += 0.5) {
+//            dibble.add(dbl);
+//        }
+//
+//        for (int i = 0; i < dibble.size(); i++) {
+//            double value = dibble.get(i);
+//            System.out.println(i + " = " + value);
+//        }
+//
+//    }
     }
 
 }

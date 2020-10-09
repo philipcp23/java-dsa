@@ -42,18 +42,29 @@ public class Bank {
         if (branch != null) {
             System.out.println(
                     "Customer details for branch " + branch.getName());
-            var branchCustomers = branch.getCustomers();
+            ArrayList<Customer> branchCustomers
+                    = branch.getCustomers();
             int index = 0;
-            for (var c : branchCustomers) {
-                c = branchCustomers.get(index);
+            for (Customer customer : branchCustomers) {
+                customer = branchCustomers.get(index);
                 System.out.println("Customer: "
-                + "[" + index + "]");
+                + "[" + (index+1) + "]");
                 if (transactions) {
-                    
+                    System.out.println("Transaction");
+                    ArrayList<Double> transaction
+                            = customer.getTransactions();
+                    for (var t : transaction) {
+                        System.out.println("[" +
+                                (index+1) + "] Amount " +
+                                transaction.get(index));
+                    }
                 }
+                index++;
             }
+            return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
 
