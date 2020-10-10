@@ -28,7 +28,7 @@ public class Bank {
     }
 
     private Branch findBranch(String branch) {
-        for (int i = 0; i < this.branches.size(); i ++) {
+        for (int i = 0; i < this.branches.size(); i++) {
             Branch check = this.branches.get(i);
             if (check.getName().equals(branch)) {
                 return check;
@@ -37,64 +37,39 @@ public class Bank {
         return null;
     }
 
+    public boolean addCustomerTransaction(String branchName, String customer, double amount) {
+        Branch branch = findBranch(branchName);
+        if (branch != null) {
+            branch.addCustomerTransaction(customer, amount);
+            return true;
+        }
+        return false;
+    }
+
     public boolean listCustomers(String branchName, boolean transactions) {
         Branch branch = findBranch(branchName);
         if (branch != null) {
-            System.out.println(
-                    "Customer details for branch " + branch.getName());
-            ArrayList<Customer> branchCustomers
-                    = branch.getCustomers();
-            int index = 0;
-            for (Customer customer : branchCustomers) {
-                customer = branchCustomers.get(index);
-                System.out.println("Customer: "
-                + "[" + (index+1) + "]");
+            System.out.println("Customer details for branch " + branch.getName());
+
+            ArrayList<Customer> branchCustomers = branch.getCustomers();
+            for (int i = 0; i < branchCustomers.size(); i++) {
+            Customer branchCustomer = branchCustomers.get(i);//
+                System.out.println("Customer: [" + (i+1) + "]" + branchCustomer.getName());
                 if (transactions) {
-                    System.out.println("Transaction");
-                    ArrayList<Double> transaction
-                            = customer.getTransactions();
-                    for (var t : transaction) {
-                        System.out.println("[" +
-                                (index+1) + "] Amount " +
-                                transaction.get(index));
+                    System.out.println("Transactions");
+                    ArrayList<Double> arrTransactions = branchCustomer.getTransactions();
+                    for (int j = 0; j < arrTransactions.size(); j++) {
+                        System.out.println("[" + (i+1) + "] Amount " +
+                        arrTransactions.get(j));
                     }
                 }
-                index++;
             }
             return true;
         } else {
             return false;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
 

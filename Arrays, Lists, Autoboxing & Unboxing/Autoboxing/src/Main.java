@@ -27,15 +27,14 @@ public class Main {
 
         Bank bank = new Bank("PNC");
 
-        bank.addBranch("South Side");
-
-        bank.addCustomer("South Side",
+        bank.addBranch("South");
+        bank.addCustomer("South",
                 "Phil",
                 100.00);
-        bank.addCustomer("South Side",
+        bank.addCustomer("South",
                 "Alexa",
                 75.00);
-        bank.addCustomer("South Side",
+        bank.addCustomer("South",
                 "Dee",
                 45.00);
 
@@ -44,7 +43,13 @@ public class Main {
                 "Sam",
                 90.00);
 
-        bank.listCustomers("South Side", false);
+        bank.addCustomerTransaction("Pittsburgh", "Sam", 100.00);
+        bank.addCustomerTransaction("South", "Phil", 200.0);
+        bank.addCustomerTransaction("South", "Alexa", 30.00);
+        bank.addCustomerTransaction("South", "Dee", 50.00);
+
+        bank.listCustomers("Pittsburgh", true);
+        bank.listCustomers("South", true);
 
 
         /*
