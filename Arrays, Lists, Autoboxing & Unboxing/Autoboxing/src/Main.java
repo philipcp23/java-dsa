@@ -51,6 +51,21 @@ public class Main {
         bank.listCustomers("Pittsburgh", true);
         bank.listCustomers("South", true);
 
+        bank.addBranch("North");
+
+        if (!bank.addCustomer("North", "Brad", 6.67)) {
+            System.out.println("Error branch does not exist");
+        }
+        if (!bank.addBranch("North")) {
+            System.out.println("Branch already exists");
+        }
+        if (!bank.addCustomerTransaction("South", "Billy", 6.67)) {
+            System.out.println("Customer does not exist at branch");
+        }
+        if (!bank.addCustomer("South", "Phil", 7.77)) {
+            System.out.println("Customer already exists");
+        }
+
 
         /*
         Your job is to create a simple banking application.
