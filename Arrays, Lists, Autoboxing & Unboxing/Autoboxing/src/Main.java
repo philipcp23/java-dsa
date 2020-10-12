@@ -56,10 +56,10 @@ public class Main {
         if (!bank.addCustomer("North", "Brad", 6.67)) {
             System.out.println("Error branch does not exist");
         }
-        if (!bank.addBranch("North")) {
+        if (!bank.addBranch("South")) {
             System.out.println("Branch already exists");
         }
-        if (!bank.addCustomerTransaction("South", "Billy", 6.67)) {
+        if (!bank.addCustomerTransaction("South", "Tommy", 6.67)) {
             System.out.println("Customer does not exist at branch");
         }
         if (!bank.addCustomer("South", "Phil", 7.77)) {

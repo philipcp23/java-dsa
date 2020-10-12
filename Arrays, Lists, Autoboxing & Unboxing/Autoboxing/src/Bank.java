@@ -40,8 +40,7 @@ public class Bank {
     public boolean addCustomerTransaction(String branchName, String customer, double amount) {
         Branch branch = findBranch(branchName);
         if (branch != null) {
-            branch.addCustomerTransaction(customer, amount);
-            return true;
+            return branch.addCustomerTransaction(customer, amount);
         }
         return false;
     }
