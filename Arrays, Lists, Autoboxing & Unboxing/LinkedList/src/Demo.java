@@ -1,5 +1,6 @@
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class Demo {
     public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class Demo {
         vacation.add(2, "Australia");
         printList(vacation);
 
-        vacation.remove(1);
+        vacation.remove(6);
         printList(vacation);
     }
 
@@ -28,4 +29,30 @@ public class Demo {
         }
         System.out.println("=============================");
     }
+
+    private static boolean addInOrder(LinkedList<String> linkedList, String newVacation) {
+        ListIterator<String> listIterator = linkedList.listIterator();
+        while(listIterator.hasNext()) {
+            int compare = listIterator.next().compareTo(newVacation);
+            if (compare == 0) {
+                System.out.println(newVacation + " is already included as a destination");
+                return false;
+            } else if (compare > 0) {
+                listIterator.previous();
+                listIterator.add(newVacation);
+                return true;
+            } else if (compare < 0) {
+                //
+            }
+        }
+
+        listIterator.add(newVacation);
+    }
+
+
+
+
+
+
+
 }
