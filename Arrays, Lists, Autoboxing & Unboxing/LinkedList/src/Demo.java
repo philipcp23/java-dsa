@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Demo {
@@ -10,11 +11,21 @@ public class Demo {
         vacation.add("France");
         vacation.add("Hawaii");
         vacation.add("Switzerland");
-        vacation.add("Australia");
 
+        printList(vacation);
+
+        vacation.add(2, "Australia");
+        printList(vacation);
+
+        vacation.remove(1);
         printList(vacation);
     }
 
-    private static void printList(LinkedList<String> vacation) {
+    private static void printList(LinkedList<String> linkedList) {
+        Iterator<String> i = linkedList.iterator();
+        while (i.hasNext()) {
+            System.out.println("Now visiting: " + i.next());
+        }
+        System.out.println("=============================");
     }
 }
