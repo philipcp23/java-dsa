@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Demo {
     public static void main(String[] args) {
         LinkedList<String> vacation = new LinkedList<String>();
-        addInOrder(vacation, "Italy");
+        addInOrder(vacation, "Africa");
         addInOrder(vacation, "Spain");
         addInOrder(vacation, "Ireland");
         addInOrder(vacation, "Germany");
@@ -23,6 +23,10 @@ public class Demo {
         addInOrder(vacation, "Switzerland");
         addInOrder(vacation, "India");
         addInOrder(vacation, "Africa");
+        addInOrder(vacation, "Zali");
+        addInOrder(vacation, "York");
+
+
         System.out.println("=============================");
         //printList(vacation);
         visit(vacation);
@@ -40,6 +44,8 @@ public class Demo {
         ListIterator<String> listIterator = linkedList.listIterator();
         while(listIterator.hasNext()) {
             int compare = listIterator.next().compareTo(newVacation);
+//            System.out.println(compare + " is the result of compareTo()\n" +
+//                    newVacation + " is the String newVacation");
             if (compare == 0) {
                 System.out.println(newVacation + " is already included as a destination");
                 return false;
