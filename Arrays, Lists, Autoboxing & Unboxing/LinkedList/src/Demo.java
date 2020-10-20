@@ -3,6 +3,7 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Scanner;
 
+
 public class Demo {
     public static void main(String[] args) {
         LinkedList<String> vacation = new LinkedList<String>();
@@ -11,13 +12,19 @@ public class Demo {
         addInOrder(vacation, "Ireland");
         addInOrder(vacation, "Germany");
         addInOrder(vacation, "France");
-        addInOrder(vacation, "Hawaii");
+        addInOrder(vacation, "Bali");
+        addInOrder(vacation, "Colombia");
+        addInOrder(vacation, "Denmark");
+        addInOrder(vacation, "England");
+        addInOrder(vacation, "Geneva");
+        addInOrder(vacation, "Japan");
+        addInOrder(vacation, "Korea");
+        addInOrder(vacation, "Ukraine");
         addInOrder(vacation, "Switzerland");
-        printList(vacation);
-
         addInOrder(vacation, "India");
         addInOrder(vacation, "Africa");
-        printList(vacation);
+        System.out.println("=============================");
+        //printList(vacation);
         visit(vacation);
     }
 
@@ -104,7 +111,7 @@ public class Demo {
     }
 
     private static void printMenu() {
-        System.out.println("Available actions: \npress ");
+        System.out.println("Available actions: \nPress ");
         System.out.println("0 - to quit\n" +
                 "1 - go to the next city\n" +
                 "2 - go to previous city\n" +
