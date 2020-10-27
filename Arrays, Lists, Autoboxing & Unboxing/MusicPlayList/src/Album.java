@@ -46,7 +46,7 @@ public class Album {
             playList.add(checkedSong);
             return true;
         }
-        System.out.println("The " + title + "does not exist in the album");
+        System.out.println("The song " + "'" + title + "'" + " does not exist in the album");
         return false;
     }
 
