@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Album {
     private String album;
@@ -26,6 +27,27 @@ public class Album {
                 return checkedSong;
             }
         }
+        return null;
+    }
+
+    public boolean addToPlayList(int trackNumber, LinkedList<Song> playList) {
+        int index = trackNumber - 1;
+        if ((index >= 0) && index <= songs.size()) {
+            playList.add(songs.get(index));
+            return true;
+        }
+        System.out.println("The album does have a track number: " + trackNumber);
+        return false;
+    }
+
+    public boolean addToPlayList(String title, LinkedList<Song> playList) {
+        var checkedSong = findSong(title);
+        if (checkedSong != null) {
+            playList.add(checkedSong);
+            return true;
+        }
+        System.out.println("The " + title + "does not exist in the album");
+        return false;
     }
 
 
