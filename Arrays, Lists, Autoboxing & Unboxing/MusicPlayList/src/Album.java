@@ -7,13 +7,13 @@ public class Album {
     private ArrayList<Song> songs;
 
 
-    public Album(String album, String artist, ArrayList<Song> songs) {
+    public Album(String album, String artist) {
         this.album = album;
         this.artist = artist;
         this.songs = new ArrayList<Song>();
     }
 
-    private boolean addSong(String title, double duration) {
+    public boolean addSong(String title, double duration) {
         if (findSong(title) == null) {
             songs.add(new Song(title, duration));
             return true;

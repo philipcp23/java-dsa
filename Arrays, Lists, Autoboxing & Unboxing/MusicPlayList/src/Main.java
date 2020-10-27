@@ -17,5 +17,14 @@ public class Main {
         As an optional extra, provide an option to remove the current song from the playlist
         (hit: listiterator.remove();
          */
+
+        var album = new Album("Abbey Road", "The Beatles"); // Side one
+        album.addSong("Come Together", 4.19);
+        album.addSong("Something", 3.02);
+        album.addSong("Maxwell's Silver Hammer", 3.27);
+        album.addSong("Oh! Darling", 3.27);
+        album.addSong("Octopus's Garden", 2.51);
+        album.addSong("I want you (She's so heavy)", 7.47);
+
     }
 }
