@@ -1,140 +1,257 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.Scanner;
 
 public class Main {
-    private static ArrayList<Album> albums = new ArrayList<>();
+    private static Scanner scanner = new Scanner(System.in);
+    private static LinkedList<Song> playlist = new LinkedList<>();
+    private static ArrayList<Album> storage = new ArrayList<>();
 
     public static void main(String[] args) {
-        /*
-        --Create a program that implements a playlist for songs
-        --Create a Song class having Title and Duration for a song.
-        --The program will have an Album class containing a list of songs.
-        --The albums will be stored in ArrayList
-        Songs from different albums can be added to the playlist and will appear in the list in order
-        they are added.
-        Once the songs have been added to the playlist, create a menu of options to:-
-        Quit, Skip forward to the next song, skip backwards to a previous song. Replay the current song.
-        List the songs in the playlist
-        A song must exist in an album before it can be added to the playlist (so you can only play songs that you own).
-        Hint: To replay a song, consider what happened when we went back and forth from a city before we
-        started tracking the direction we were going.
-        As an optional extra, provide an option to remove the current song from the playlist
-        (hit: listiterator.remove();
-         */
+        storage.add(new Album("album 1"));
+        storage.add(new Album("album 2"));
 
+        storage.get(0).addSong("song 1", "2:23");
+        storage.get(0).addSong("song 2", "3:44");
+        storage.get(0).addSong("song 3", "2:03");
+        storage.get(0).addSong("song 4", "2:45");
+        storage.get(0).addSong("song 5", "2:28");
+        storage.get(1).addSong("song a", "3:12");
+        storage.get(1).addSong("song b", "6:37");
+        storage.get(1).addSong("song c", "4:23");
+        storage.get(1).addSong("song d", "5:51");
+        storage.get(1).addSong("song e", "3:00");
+        storage.get(1).addSong("song f", "2:28");
 
-        var album = new Album("Abbey Road (Side one)", "The Beatles");
-        album.addSong("Come Together", 4.19);
-        album.addSong("Something", 3.02);
-        album.addSong("Maxwell's Silver Hammer", 3.27);
-        album.addSong("Oh! Darling", 3.27);
-        album.addSong("Octopus's Garden", 2.51);
-        album.addSong("I want you (She's so heavy)", 7.47);
-        albums.add(album);
-
-        album = new Album("Abbey Road (Side Two)", "The Beatles");
-        album.addSong("Here Comes the Sun", 3.05);
-        album.addSong("Because", 2.45);
-        album.addSong("You Never Give Me Your Money", 4.03);
-        album.addSong("Sun King", 2.26);
-        album.addSong("Mean Mr. Mustard", 1.06);
-        album.addSong("Polythene Pam", 1.13);
-        album.addSong("She Came In Through the Bathroom Window", 1.58);
-        album.addSong("Golden Slumbers", 1.31);
-        album.addSong("Carry That Weight", 1.36);
-        album.addSong("The End", 2.05);
-        album.addSong("Her Majesty (hidden track)", 0.23);
-        albums.add(album);
-
-        LinkedList<Song> playList = new LinkedList<>();
-        albums.get(0).addToPlayList("Come Together", playList);
-        albums.get(0).addToPlayList("Something", playList);
-        albums.get(1).addToPlayList("Here Comes the Sun", playList);
-        albums.get(0).addToPlayList("Yellow Submarine", playList); // Not in album
-        albums.get(1).addToPlayList(2, playList);
-        albums.get(1).addToPlayList(4, playList);
-        albums.get(1).addToPlayList(6, playList);
-        albums.get(1).addToPlayList(24, playList); // No an index
-
-        play(playList);
+        musicPlayer();
 
     }
 
-    private static void play(LinkedList<Song> playList) {
-        Scanner scanner = new Scanner(System.in);
+    public static void musicPlayer() {
         boolean quit = false;
-        boolean forward = true;
-        ListIterator<Song> listIterator = playList.listIterator();
-        if (playList.size() == 0) {
-            System.out.println("No songs in the playlist");
-        } else {
-            System.out.println("Now playing: " + listIterator.next().toString());
-        }
+        int action;
+        String yourChoice = "Choose an option:";
+
+        printMenu();
+
         while (!quit) {
-            int action = scanner.nextInt();
+            System.out.println(yourChoice);
+            action = scanner.nextInt();
             scanner.nextLine();
+
             switch (action) {
                 case 0:
-                    System.out.println("Playlist Complete");
+                    printMenu();
+                    break;
+                case 1:
+                    addNewAlbum();
+                    break;
+                case 2:
+                    addSongToAlbum();
+                    break;
+                case 3:
+                    Album album = getAlbum();
+                    if (album != null) {
+                        album.printSongsList();
+                    }
+                    break;
+                case 4:
+                    addSongToPlaylist();
+                    break;
+                case 5:
+                    runPlaylist();
+                    break;
+                case 6:
+                    printAllSongs();
+                    break;
+                case 7:
                     quit = true;
+                    break;
+            }
+        }
+    }
+
+    public static void printMenu() {
+        System.out.println("********** MENU **********");
+        System.out.println("0 - show MENU\n" +
+                "1 - add a new album\n" +
+                "2 - add a song to an album\n" +
+                "3 - show songs in a chosen album\n" +
+                "4 - add a song to a playlist\n" +
+                "5 - start a playlist\n" +
+                "6 - show songs on the playlist\n" +
+                "7 - quit ");
+    }
+
+    public static void addNewAlbum() {
+        System.out.println("Enter name of the album:");
+        String albumName = scanner.nextLine();
+        storage.add(new Album(albumName));
+        System.out.println("Album " + albumName + " added to the storage.");
+    }
+
+    public static void addSongToAlbum() {
+
+        if (storage.size() > 0) {
+            Album album = getAlbum();
+
+            if (album != null) {
+                System.out.println("Enter a song name:");
+                String songName = scanner.nextLine();
+                System.out.println("Enter duration:");
+                String duration = scanner.nextLine();
+
+                boolean result = album.addSong(songName, duration);
+
+                if (result) {
+                    System.out.println("Successfully added " + songName + " to the album.");
+                    return;
+                }
+                System.out.println("Song is already in the album");
+            }
+        }
+    }
+
+    public static void addSongToPlaylist() {
+        Album album = getAlbum();
+
+        if (album != null) {
+            album.printSongsList();
+
+            System.out.println("Enter a song number or enter it's title:");
+            if (scanner.hasNextInt()) {
+                int songNumber = scanner.nextInt();
+                scanner.nextLine();
+
+                album.addToPlayList(songNumber, playlist);
+            } else {
+                String songTitle = scanner.nextLine();
+
+                album.addToPlayList(songTitle, playlist);
+            }
+        }
+    }
+
+    public static void runPlaylist() {
+        ListIterator<Song> listIterator = playlist.listIterator();
+        boolean quit = false;
+        boolean forward = true;
+        int action;
+        String currentSong = null;
+        String yourChoice = "Choose an option:";
+
+        printPlaylistMenu();
+
+        while (!quit) {
+
+            if (currentSong != null) {
+                System.out.println("***** Currently playing: " + currentSong + " *****\n" +
+                        "(Enter 4 for MENU options)");
+            } else {
+                System.out.println("##### MUSIC IS OFF #####");
+            }
+
+            System.out.println(yourChoice);
+            action = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (action) {
+                case 0:
+                    quit = true;
+                    printMenu();
                     break;
                 case 1:
                     if (!forward) {
                         if (listIterator.hasNext()) {
                             listIterator.next();
                         }
-                        forward = true;
-                    } else {
-                        if (listIterator.hasNext()) {
-                            System.out.println("Now playing: " + listIterator.next().toString());
-                        } else {
-                            System.out.println("End of playlist");
-                            forward = false;
-                        }
                     }
+
+                    if (listIterator.hasNext()) {
+                        System.out.println("Next song.");
+                        currentSong = listIterator.next().toString();
+                        forward = true;
+                        break;
+                    }
+                    System.out.println("No more songs available.");
+                    forward = false;
                     break;
                 case 2:
                     if (forward) {
                         if (listIterator.hasPrevious()) {
                             listIterator.previous();
                         }
-                        forward = false;
-                    } else {
-                        if (listIterator.hasPrevious()) {
-                            System.out.println("Now playing: " + listIterator.previous().toString());
-                        } else {
-                            System.out.println("End of playlist");
-                            forward = true;
-                        }
                     }
+
+                    if (listIterator.hasPrevious()) {
+                        System.out.println("Previous song.");
+                        currentSong = listIterator.previous().toString();
+                        forward = false;
+                        break;
+                    }
+                    System.out.println("You've reached the start of the list.");
+                    forward = true;
                     break;
                 case 3:
+                    if (currentSong == null) {
+                        System.out.println("First start the playlist.");
+                        break;
+                    }
+
+                    if (forward && listIterator.hasPrevious()){
+                        listIterator.previous();
+                    } else if (!forward && listIterator.hasNext()) {
+                        listIterator.next();
+                    }
+
+                    forward = !forward;
+                    listIterator.remove();
+                    System.out.println("Song " + currentSong + " removed from playlist.");
+                    currentSong = null;
                     break;
                 case 4:
-                    printList(playList);
+                    printPlaylistMenu();
                     break;
                 case 5:
-                    printMenu();
+                    printAllSongs();
                     break;
             }
         }
     }
 
-    private static void printMenu() {
-        System.out.println("Playlist Action Menu:\nPress -");
-        System.out.println("0 - Quit playlist\n" +
-                "1 - Next Song\n" +
-                "2 - Previous Song\n" +
-                "3 - Replay Song\n" +
-                "4 - List of songs available\n" +
-                "5 - Print available actions");
+    public static void printPlaylistMenu() {
+        System.out.println("********** PLAYLIST OPTIONS **********");
+        System.out.println("0 - quit to main menu\n" +
+                "1 - next song\n" +
+                "2 - previous song\n" +
+                "3 - remove currently playing from playlist\n" +
+                "4 - show playlist options\n" +
+                "5 - show all songs on a playlist");
     }
 
-    private static void printList(LinkedList<Song> playList) {
-        Iterator<Song> iterator = playList.iterator();
-        System.out.println("==================");
-        while (iterator.hasNext()) {
-            iterator.next();
+    public static void printAllSongs() {
+        System.out.println("----------PLAYLIST----------");
+        for (Song song: playlist) {
+            System.out.println(song.toString());
         }
-        System.out.println("==================");
+        System.out.println("----------PLAYLIST----------");
+    }
+
+    public static Album getAlbum() {
+        for (int i = 0; i < storage.size(); i++) {
+            System.out.println((i +1) + ". " + storage.get(i).getName());
+        }
+
+        System.out.println("Enter a number representing chosen album:");
+        int albumIndex = scanner.nextInt() - 1;
+        scanner.nextLine();
+
+        if (((albumIndex + 1) > 0) && (storage.size() >= (albumIndex + 1))) {
+            return storage.get(albumIndex);
+        }
+
+        System.out.println("Wrong album number");
+        return null;
     }
 }
