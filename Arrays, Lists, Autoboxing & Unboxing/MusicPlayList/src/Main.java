@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.ListIterator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     private static ArrayList<Album> albums = new ArrayList<>();
@@ -96,12 +93,48 @@ public class Main {
                     }
                     break;
                 case 2:
+                    if (forward) {
+                        if (listIterator.hasPrevious()) {
+                            listIterator.previous();
+                        }
+                        forward = false;
+                    } else {
+                        if (listIterator.hasPrevious()) {
+                            System.out.println("Now playing: " + listIterator.previous().toString());
+                        } else {
+                            System.out.println("End of playlist");
+                            forward = true;
+                        }
+                    }
                     break;
                 case 3:
                     break;
                 case 4:
+                    printList(playList);
+                    break;
+                case 5:
+                    printMenu();
                     break;
             }
         }
+    }
+
+    private static void printMenu() {
+        System.out.println("Playlist Action Menu:\nPress -");
+        System.out.println("0 - Quit playlist\n" +
+                "1 - Next Song\n" +
+                "2 - Previous Song\n" +
+                "3 - Replay Song\n" +
+                "4 - List of songs available\n" +
+                "5 - Print available actions");
+    }
+
+    private static void printList(LinkedList<Song> playList) {
+        Iterator<Song> iterator = playList.iterator();
+        System.out.println("==================");
+        while (iterator.hasNext()) {
+            iterator.next();
+        }
+        System.out.println("==================");
     }
 }
