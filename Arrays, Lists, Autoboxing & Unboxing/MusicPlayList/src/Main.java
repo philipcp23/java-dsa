@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ListIterator;
+import java.util.Scanner;
 
 public class Main {
     private static ArrayList<Album> albums = new ArrayList<>();
@@ -62,11 +63,45 @@ public class Main {
     }
 
     private static void play(LinkedList<Song> playList) {
+        Scanner scanner = new Scanner(System.in);
+        boolean quit = false;
+        boolean forward = true;
         ListIterator<Song> listIterator = playList.listIterator();
         if (playList.size() == 0) {
             System.out.println("No songs in the playlist");
         } else {
             System.out.println("Now playing: " + listIterator.next().toString());
+        }
+        while (!quit) {
+            int action = scanner.nextInt();
+            scanner.nextLine();
+            switch (action) {
+                case 0:
+                    System.out.println("Playlist Complete");
+                    quit = true;
+                    break;
+                case 1:
+                    if (!forward) {
+                        if (listIterator.hasNext()) {
+                            listIterator.next();
+                        }
+                        forward = true;
+                    } else {
+                        if (listIterator.hasNext()) {
+                            System.out.println("Now playing: " + listIterator.next().toString());
+                        } else {
+                            System.out.println("End of playlist");
+                            forward = false;
+                        }
+                    }
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+            }
         }
     }
 }
