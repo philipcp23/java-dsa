@@ -9,7 +9,7 @@ public class Main {
     private static ArrayList<Album> storage = new ArrayList<>();
 
     public static void main(String[] args) {
-        storage.add(new Album("album 1"));
+        storage.add(new Album("Licensed to Ill"));
         storage.add(new Album("album 2"));
 
         storage.get(0).addSong("song 1", "2:23");
