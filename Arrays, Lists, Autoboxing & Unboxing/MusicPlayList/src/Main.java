@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         storage.add(new Album("Licensed to Ill"));
-        storage.add(new Album("album 2"));
+        storage.add(new Album("Ill Communication"));
 
         storage.get(0).addSong("song 1", "2:23");
         storage.get(0).addSong("song 2", "3:44");
