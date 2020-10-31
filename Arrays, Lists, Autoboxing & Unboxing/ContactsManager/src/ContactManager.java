@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class ContactManager {
-    private Contacts[] myContacts;
+    Contacts[] myContacts;
     private int numOfContacts;
 
     ContactManager() {
@@ -15,9 +15,11 @@ public class ContactManager {
 
     }
 
-    public String searchContact(String searchName) {
+    public Contacts searchContact(String searchName) {
         for (int i = 0; i < numOfContacts; i++) {
-            if ()
+            if (myContacts[i].name.equals(searchName)) {
+                return myContacts[i];
+            }
         }
     }
 
