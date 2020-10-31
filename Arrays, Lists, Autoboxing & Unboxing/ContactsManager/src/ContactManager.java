@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class ContactManager {
-    Contacts[] myContacts;
+    private Contacts[] myContacts;
     private int numOfContacts;
 
     ContactManager() {
@@ -21,7 +21,6 @@ public class ContactManager {
                 return myContacts[i];
             }
         }
+        return null;
     }
-
-
 }
