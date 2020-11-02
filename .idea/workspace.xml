@@ -2,46 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="421801e7-fdaa-4594-ab53-fbb208964208" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/CalculateInterest/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/CalculateInterest/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/DayOfTheWeek/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/DayOfTheWeek/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/DigitSum/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/DigitSum/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/EvenDigitSum/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/EvenDigitSum/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/FirstAndLastDigitSum/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/FirstAndLastDigitSum/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/NumberInWord/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/NumberInWord/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/NumberOfDaysInMonth/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/NumberOfDaysInMonth/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/NumberPalindrome/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/NumberPalindrome/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/SumOddRange/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/SumOddRange/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/SumThreeAndFive/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/SumThreeAndFive/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/Switch/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/Switch/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control Flow Statements/While/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Control Flow Statements/While/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/AreaCalculator/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/AreaCalculator/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/BarkingDog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/BarkingDog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/CodeBlocks_If_Else/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/CodeBlocks_If_Else/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/DecimalComparator/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/DecimalComparator/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/DecimalComparator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/DecimalComparator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/EqualSumChecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/EqualSumChecker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/EqualityPrinter/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/EqualityPrinter/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/LeapYearCalculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/LeapYearCalculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/MegaBytesConverter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/MegaBytesConverter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/MinutesToYearsAndDays/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/MinutesToYearsAndDays/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/PlayingCat/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/PlayingCat/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/SecondsAndMinutes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/SecondsAndMinutes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/SpeedConverter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/SpeedConverter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods and More/TeenNumberChecker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Methods and More/TeenNumberChecker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/ByteShortIntLong/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/ByteShortIntLong/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/ByteShortIntLong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/ByteShortIntLong/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/CharAndBoolean/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/CharAndBoolean/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/CharAndBoolean/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/CharAndBoolean/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/FloatAndDouble/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/FloatAndDouble/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/FloatAndDouble/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/FloatAndDouble/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/HelloWorld/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/HelloWorld/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/HelloWorld/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/HelloWorld/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/MethodOverload/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/MethodOverload/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/OperatorChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/OperatorChallenge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/Operators/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/Operators/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/Operators/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/Operators/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/Strings/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/Strings/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tyes and Operators/Strings/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tyes and Operators/Strings/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arrays, Lists, Autoboxing &amp; Unboxing/ContactsManager/src/Contacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/Arrays, Lists, Autoboxing &amp; Unboxing/ContactsManager/src/Contacts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arrays, Lists, Autoboxing &amp; Unboxing/ContactsManager/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Arrays, Lists, Autoboxing &amp; Unboxing/ContactsManager/src/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +16,7 @@
   </component>
   <component name="ProjectId" id="1hsyIbWsA82SiBj8qIOsAVcw3mR" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Control Flow Statements/EvenDigitSum" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Inner and Abstract Classes &amp; Interfaces/InterfaceSolution" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.19433199" />
@@ -89,7 +51,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
