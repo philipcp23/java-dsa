@@ -3,6 +3,6 @@ import java.util.List;
 
 public interface Saveable {
 
-    List<ArrayList> saveValues();
-    void populateObjects();
+    ArrayList<String> write();
+    void read(ArrayList<String> savedUsers);
 }

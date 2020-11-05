@@ -3,12 +3,12 @@ import java.util.List;
 
 public class Login implements Saveable {
     @Override
-    public List<ArrayList> saveValues() {
+    public ArrayList<String> write() {
         return null;
     }
 
     @Override
-    public void populateObjects() {
+    public void read(ArrayList<String> savedUsers) {
 
     }
 }
