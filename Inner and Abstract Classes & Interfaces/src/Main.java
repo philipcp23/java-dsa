@@ -17,5 +17,7 @@ public class Main {
         Simulate getting values from a file - this allows you to type as many values as your class requires,
         and returns an ArrayList.
          */
+
+
     }
 }
